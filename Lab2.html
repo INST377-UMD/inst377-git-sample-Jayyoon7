@@ -1,0 +1,45 @@
+<html>
+    <head>
+        <title>Jay's Contact Form</title>
+        <style>
+            body{
+                background-color: lightskyblue;
+            }
+            
+            input[type="submit"] {
+                margin: 20px 10px;
+                background-color: darkgray;
+            }
+
+            input[type="submit"]:hover {
+                background-color: white;
+            }
+            #first
+            {
+                margin: 20px 10px;
+                font-size: larger;
+            }
+        </style>
+    </head>
+    <body>
+        <h1>INST377 - Lab 2 - Introductions</h1>
+        <div id="first" class = "textboxes">
+        <form name = "contactForm" method = "get" action = "Lab2Page2.html">
+            <!--Name--> 
+            <label for = "firstName"> First Name: </label>
+            <input type = "text" id = "firstName" required>
+        
+            <label for = "lastName"> Last Name: </label>
+            <input type = "text" id = "lastName" required>
+            <br><hr>
+
+            <!--Email Adress--> 
+            <label for = "email"> Email: </label>
+            <input type = "email" id = "email" placeholder = "example@gmail.com" required>
+            <br><hr>
+
+            <input type = "submit" id = "submit">
+        </form>
+        </div>
+    </body>
+</html>

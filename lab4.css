@@ -16,8 +16,8 @@ background-color: lightblue;
     margin-bottom: 20px;
     display: flex;
     justify-content: center;
-    align-items: center; /* Center content vertically */
-    border: 2px solid white; /* Add border */
+    align-items: center;
+    border: 2px solid white;
     box-sizing: border-box;
     border-radius: 10px;
 }

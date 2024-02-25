@@ -1,0 +1,77 @@
+<html>
+    <head>
+        <title>Jay's Lab 4</title>
+        <link rel = "stylesheet" href="lab4.css">
+    </head>
+    <body>
+        <h1 id = "heading">INST377 - Lab 4</h1>
+        <div class="section-container">
+
+            <!-- Alert Me -->
+            <div class = "section">
+                <form name = "alertMe" onsubmit = "return(response())">
+                    <label>Name: </label>
+                    <input type = "text" id = "name" required>
+                    <input type = "submit" value = "Alert Me!">
+                </form>
+
+                <script type = "text/javascript">
+                    function response() {
+                        var input = document.getElementById("name").value;
+                        alert("Hi " + input + "!")
+                        return false;
+                    }
+                </script>
+            </div>
+
+            <!-- Change Color -->
+            <div class = "section">
+                <button onclick = "changeColor()">Change Color</button>
+                    
+                <script type = "text/javascript">
+                    function changeColor() {
+                        if(document.body.style.backgroundColor == 'lightgreen') {
+                            document.body.style.backgroundColor = 'lightblue'
+                        } else {
+                            document.body.style.backgroundColor = 'lightgreen'
+                        }
+                    }
+                </script>
+            </div>
+
+            <!-- Text Tester -->
+            <div class = "section">
+                <form name = "textTester" onsubmit = "return(validate())">
+                    <label>Text Tester: </label>
+                    <input type = "text" id = "txt" required>
+                    <input type = "submit" value = "Validate Text">
+                </form>
+
+                <script type = "text/javascript">
+                    function validate() {
+                        var validation = /[!@#$%^&*()_+\-=\[\]{};':"\\|,.<>\/?]+/;
+                        if(validation.test(document.textTester.txt.value)) {
+                            alert('Special Characters Detected')
+                            return false;
+                        } else {
+                            alert('No Special Characters Detected')
+                            return false;
+                        }
+                    }
+                </script>
+            </div>
+
+            <!-- Text -->
+            <div class = "section">
+                <button onclick = "addText()">Add Text</button>
+                    
+                <script type = "text/javascript">
+                    function addText() {
+                        var add = document.getElementById("heading");
+                            add.textContent += "Add Text";
+                    }
+                </script>
+            </div>
+        </div>    
+    </body>
+</html>
